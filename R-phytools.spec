@@ -4,24 +4,12 @@
 #
 Name     : R-phytools
 Version  : 0.6.60
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/phytools_0.6-60.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/phytools_0.6-60.tar.gz
 Summary  : Phylogenetic Tools for Comparative Biology (and Other Things)
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-animation
-Requires: R-ape
-Requires: R-clusterGeneration
-Requires: R-coda
-Requires: R-combinat
-Requires: R-expm
-Requires: R-maps
-Requires: R-mnormt
-Requires: R-numDeriv
-Requires: R-phangorn
-Requires: R-plotrix
-Requires: R-scatterplot3d
 BuildRequires : R-animation
 BuildRequires : R-ape
 BuildRequires : R-clusterGeneration
@@ -30,6 +18,7 @@ BuildRequires : R-combinat
 BuildRequires : R-expm
 BuildRequires : R-maps
 BuildRequires : R-mnormt
+BuildRequires : R-msm
 BuildRequires : R-numDeriv
 BuildRequires : R-phangorn
 BuildRequires : R-plotrix
@@ -47,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538150740
+export SOURCE_DATE_EPOCH=1552876320
 
 %install
+export SOURCE_DATE_EPOCH=1552876320
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538150740
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -86,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library phytools|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  phytools || :
 
 
 %files
