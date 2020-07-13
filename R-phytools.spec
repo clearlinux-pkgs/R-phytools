@@ -4,7 +4,7 @@
 #
 Name     : R-phytools
 Version  : 0.7.47
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/phytools_0.7-47.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/phytools_0.7-47.tar.gz
 Summary  : Phylogenetic Tools for Comparative Biology (and Other Things)
