@@ -7,7 +7,7 @@
 #
 Name     : R-phytools
 Version  : 2.1.1
-Release  : 49
+Release  : 50
 URL      : https://cran.r-project.org/src/contrib/phytools_2.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/phytools_2.1-1.tar.gz
 Summary  : Phylogenetic Tools for Comparative Biology (and Other Things)
