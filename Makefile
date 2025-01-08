@@ -1,5 +1,5 @@
 PKG_NAME := R-phytools
-URL = https://cran.r-project.org/src/contrib/phytools_2.3-0.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/phytools_2.4-4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
